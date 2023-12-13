@@ -75,6 +75,36 @@
         ArrayAfterPigeonholeSortLabel.Text = "Array after Pigeonhole Sort: "
         PrintArray(pigeonholeSortArray, ArrayAfterPigeonholeSortListBox)
 
+        ' gnomesort
+        Dim gnomeSortArray As Integer() = DirectCast(array.Clone(), Integer())
+        PigeonholeSort(gnomeSortArray)
+        ArrayAftergnomesortLabel.Text = "Array after Pigeonhole Sort: "
+        PrintArray(pigeonholeSortArray, ArrayAftergnomesortListBox)
+
+        ' combsort
+        Dim CombSort As Integer() = DirectCast(array.Clone(), Integer())
+        PigeonholeSort(CombSort)
+        ArrayAfterCombSortLabel.Text = "Array after Pigeonhole Sort: "
+        PrintArray(pigeonholeSortArray, ArrayAfterCombsortListBox)
+
+        ' selectionSort
+        Dim SelectionSort As Integer() = DirectCast(array.Clone(), Integer())
+        PigeonholeSort(SelectionSort)
+        ArrayAfterSelectionSortLabel.Text = "Array after Pigeonhole Sort: "
+        PrintArray(pigeonholeSortArray, ArrayAfterSelectionsortListBox)
+
+        ' heapsort
+        Dim HeappSort As Integer() = DirectCast(array.Clone(), Integer())
+        HeapSort(HeappSort)
+        ArrayAfterHeapSortLabel.Text = "Array after Pigeonhole Sort: "
+        PrintArray(pigeonholeSortArray, ArrayAfterHeapsortListBox)
+
+        ' CountingSort
+        Dim CountingSortt As Integer() = DirectCast(array.Clone(), Integer())
+        CountingSort(CountingSortt)
+        ArrayAfterCountingSortLabel.Text = "Array after Pigeonhole Sort: "
+        PrintArray(pigeonholeSortArray, ArrayAfterCountingsortListBox)
+
         MessageBox.Show("Sorting complete!")
 
     End Sub
@@ -488,6 +518,139 @@
                 arr(index) = value
                 index += 1
             Next
+        Next
+    End Sub
+
+    Sub GnomeSort(ByRef arr() As Integer)
+        Dim n As Integer = arr.Length
+        Dim index As Integer = 0
+
+        While index < n
+            If index = 0 Then
+                index += 1
+            End If
+
+            If arr(index) >= arr(index - 1) Then
+                index += 1
+            Else
+                Swap(arr, index, index - 1)
+                index -= 1
+            End If
+        End While
+    End Sub
+
+    Sub Swapp(ByRef arr() As Integer, ByVal a As Integer, ByVal b As Integer)
+        Dim temp As Integer = arr(a)
+        arr(a) = arr(b)
+        arr(b) = temp
+    End Sub
+
+    Sub CombSort(ByRef arr() As Integer)
+        Dim n As Integer = arr.Length
+        Dim gap As Integer = n
+        Dim swapped As Boolean = True
+
+        While gap > 1 OrElse swapped
+            gap = Math.Max(1, CInt(gap / 1.3))
+            swapped = False
+
+            For i As Integer = 0 To n - gap - 1
+                If arr(i) > arr(i + gap) Then
+                    Swap(arr, i, i + gap)
+                    swapped = True
+                End If
+            Next
+        End While
+    End Sub
+
+    Sub SelectionSort(ByRef arr() As Integer)
+        Dim n As Integer = arr.Length
+
+        For i As Integer = 0 To n - 2
+            Dim minIndex As Integer = i
+
+            For j As Integer = i + 1 To n - 1
+                If arr(j) < arr(minIndex) Then
+                    minIndex = j
+                End If
+            Next
+
+            Swap(arr, i, minIndex)
+        Next
+    End Sub
+
+    Sub HeapSort(ByRef arr() As Integer)
+        Dim n As Integer = arr.Length
+
+        ' Construir el heap (montículo)
+        For i As Integer = CInt(n / 2) - 1 To 0 Step -1
+            Heapify(arr, n, i)
+        Next
+
+        ' Extraer elementos del heap uno por uno
+        For i As Integer = n - 1 To 1 Step -1
+            ' Mover la raíz actual al final del array
+            Swap(arr, 0, i)
+
+            ' Llamar al procedimiento Heapify en la raíz reducida
+            Heapify(arr, i, 0)
+        Next
+    End Sub
+
+    Sub Heapify(ByRef arr() As Integer, ByVal n As Integer, ByVal i As Integer)
+        Dim largest As Integer = i
+        Dim leftChild As Integer = 2 * i + 1
+        Dim rightChild As Integer = 2 * i + 2
+
+        ' Si el hijo izquierdo es más grande que la raíz
+        If leftChild < n AndAlso arr(leftChild) > arr(largest) Then
+            largest = leftChild
+        End If
+
+        ' Si el hijo derecho es más grande que el más grande hasta ahora
+        If rightChild < n AndAlso arr(rightChild) > arr(largest) Then
+            largest = rightChild
+        End If
+
+        ' Si el más grande no es la raíz
+        If largest <> i Then
+            Swap(arr, i, largest)
+
+            ' Llamar recursivamente al procedimiento Heapify en el subárbol afectado
+            Heapify(arr, n, largest)
+        End If
+    End Sub
+
+    Sub CountingSort(ByRef arr() As Integer)
+        Dim n As Integer = arr.Length
+
+        ' Encontrar el valor máximo en el array
+        Dim max As Integer = arr(0)
+        For i As Integer = 1 To n - 1
+            If arr(i) > max Then
+                max = arr(i)
+            End If
+        Next
+
+        ' Crear un array de conteo y inicializar todas las posiciones con 0
+        Dim count(max) As Integer
+        For i As Integer = 0 To max
+            count(i) = 0
+        Next
+
+        ' Incrementar el conteo de cada elemento en el array original
+        For i As Integer = 0 To n - 1
+            count(arr(i)) += 1
+        Next
+
+        ' Actualizar el array original con los elementos ordenados
+        Dim index As Integer = 0
+        For i As Integer = 0 To max
+            While count(i) > 0
+                arr(index) = i
+                index += 1
+                count(i) -= 1
+            End While
         Next
     End Sub
 

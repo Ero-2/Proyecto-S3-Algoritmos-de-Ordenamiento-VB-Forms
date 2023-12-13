@@ -46,12 +46,22 @@ Partial Class Form1
         Me.ArrayAfterSortLabel = New System.Windows.Forms.Label()
         Me.OriginalArrayListBox = New System.Windows.Forms.ListBox()
         Me.OriginalArrayLabel = New System.Windows.Forms.Label()
+        Me.ArrayAfterCombsortListBox = New System.Windows.Forms.ListBox()
+        Me.ArrayAfterCombSortLabel = New System.Windows.Forms.Label()
+        Me.ArrayAftergnomesortListBox = New System.Windows.Forms.ListBox()
+        Me.ArrayAftergnomeSortLabel = New System.Windows.Forms.Label()
+        Me.ArrayAfterCountingSortLabel = New System.Windows.Forms.Label()
+        Me.ArrayAfterCountingsortListBox = New System.Windows.Forms.ListBox()
+        Me.ArrayAfterHeapsortListBox = New System.Windows.Forms.ListBox()
+        Me.ArrayAfterHeapSortLabel = New System.Windows.Forms.Label()
+        Me.ArrayAfterSelectionsortListBox = New System.Windows.Forms.ListBox()
+        Me.ArrayAfterSelectionSortLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ArrayAfterPigeonholeSortListBox
         '
         Me.ArrayAfterPigeonholeSortListBox.FormattingEnabled = True
-        Me.ArrayAfterPigeonholeSortListBox.Location = New System.Drawing.Point(401, 307)
+        Me.ArrayAfterPigeonholeSortListBox.Location = New System.Drawing.Point(386, 307)
         Me.ArrayAfterPigeonholeSortListBox.Name = "ArrayAfterPigeonholeSortListBox"
         Me.ArrayAfterPigeonholeSortListBox.Size = New System.Drawing.Size(120, 17)
         Me.ArrayAfterPigeonholeSortListBox.TabIndex = 47
@@ -252,11 +262,106 @@ Partial Class Form1
         Me.OriginalArrayLabel.TabIndex = 24
         Me.OriginalArrayLabel.Text = "label1"
         '
+        'ArrayAfterCombsortListBox
+        '
+        Me.ArrayAfterCombsortListBox.FormattingEnabled = True
+        Me.ArrayAfterCombsortListBox.Location = New System.Drawing.Point(679, 307)
+        Me.ArrayAfterCombsortListBox.Name = "ArrayAfterCombsortListBox"
+        Me.ArrayAfterCombsortListBox.Size = New System.Drawing.Size(120, 17)
+        Me.ArrayAfterCombsortListBox.TabIndex = 51
+        '
+        'ArrayAfterCombSortLabel
+        '
+        Me.ArrayAfterCombSortLabel.AutoSize = True
+        Me.ArrayAfterCombSortLabel.Location = New System.Drawing.Point(729, 274)
+        Me.ArrayAfterCombSortLabel.Name = "ArrayAfterCombSortLabel"
+        Me.ArrayAfterCombSortLabel.Size = New System.Drawing.Size(35, 13)
+        Me.ArrayAfterCombSortLabel.TabIndex = 50
+        Me.ArrayAfterCombSortLabel.Text = "label1"
+        '
+        'ArrayAftergnomesortListBox
+        '
+        Me.ArrayAftergnomesortListBox.FormattingEnabled = True
+        Me.ArrayAftergnomesortListBox.Location = New System.Drawing.Point(527, 307)
+        Me.ArrayAftergnomesortListBox.Name = "ArrayAftergnomesortListBox"
+        Me.ArrayAftergnomesortListBox.Size = New System.Drawing.Size(120, 17)
+        Me.ArrayAftergnomesortListBox.TabIndex = 49
+        '
+        'ArrayAftergnomeSortLabel
+        '
+        Me.ArrayAftergnomeSortLabel.AutoSize = True
+        Me.ArrayAftergnomeSortLabel.Location = New System.Drawing.Point(564, 274)
+        Me.ArrayAftergnomeSortLabel.Name = "ArrayAftergnomeSortLabel"
+        Me.ArrayAftergnomeSortLabel.Size = New System.Drawing.Size(35, 13)
+        Me.ArrayAftergnomeSortLabel.TabIndex = 48
+        Me.ArrayAftergnomeSortLabel.Text = "label1"
+        '
+        'ArrayAfterCountingSortLabel
+        '
+        Me.ArrayAfterCountingSortLabel.AutoSize = True
+        Me.ArrayAfterCountingSortLabel.Location = New System.Drawing.Point(453, 355)
+        Me.ArrayAfterCountingSortLabel.Name = "ArrayAfterCountingSortLabel"
+        Me.ArrayAfterCountingSortLabel.Size = New System.Drawing.Size(35, 13)
+        Me.ArrayAfterCountingSortLabel.TabIndex = 57
+        Me.ArrayAfterCountingSortLabel.Text = "label2"
+        '
+        'ArrayAfterCountingsortListBox
+        '
+        Me.ArrayAfterCountingsortListBox.FormattingEnabled = True
+        Me.ArrayAfterCountingsortListBox.Location = New System.Drawing.Point(411, 384)
+        Me.ArrayAfterCountingsortListBox.Name = "ArrayAfterCountingsortListBox"
+        Me.ArrayAfterCountingsortListBox.Size = New System.Drawing.Size(120, 17)
+        Me.ArrayAfterCountingsortListBox.TabIndex = 56
+        '
+        'ArrayAfterHeapsortListBox
+        '
+        Me.ArrayAfterHeapsortListBox.FormattingEnabled = True
+        Me.ArrayAfterHeapsortListBox.Location = New System.Drawing.Point(240, 384)
+        Me.ArrayAfterHeapsortListBox.Name = "ArrayAfterHeapsortListBox"
+        Me.ArrayAfterHeapsortListBox.Size = New System.Drawing.Size(120, 17)
+        Me.ArrayAfterHeapsortListBox.TabIndex = 55
+        '
+        'ArrayAfterHeapSortLabel
+        '
+        Me.ArrayAfterHeapSortLabel.AutoSize = True
+        Me.ArrayAfterHeapSortLabel.Location = New System.Drawing.Point(265, 355)
+        Me.ArrayAfterHeapSortLabel.Name = "ArrayAfterHeapSortLabel"
+        Me.ArrayAfterHeapSortLabel.Size = New System.Drawing.Size(35, 13)
+        Me.ArrayAfterHeapSortLabel.TabIndex = 54
+        Me.ArrayAfterHeapSortLabel.Text = "label1"
+        '
+        'ArrayAfterSelectionsortListBox
+        '
+        Me.ArrayAfterSelectionsortListBox.FormattingEnabled = True
+        Me.ArrayAfterSelectionsortListBox.Location = New System.Drawing.Point(40, 384)
+        Me.ArrayAfterSelectionsortListBox.Name = "ArrayAfterSelectionsortListBox"
+        Me.ArrayAfterSelectionsortListBox.Size = New System.Drawing.Size(120, 17)
+        Me.ArrayAfterSelectionsortListBox.TabIndex = 53
+        '
+        'ArrayAfterSelectionSortLabel
+        '
+        Me.ArrayAfterSelectionSortLabel.AutoSize = True
+        Me.ArrayAfterSelectionSortLabel.Location = New System.Drawing.Point(64, 355)
+        Me.ArrayAfterSelectionSortLabel.Name = "ArrayAfterSelectionSortLabel"
+        Me.ArrayAfterSelectionSortLabel.Size = New System.Drawing.Size(35, 13)
+        Me.ArrayAfterSelectionSortLabel.TabIndex = 52
+        Me.ArrayAfterSelectionSortLabel.Text = "label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ArrayAfterCountingSortLabel)
+        Me.Controls.Add(Me.ArrayAfterCountingsortListBox)
+        Me.Controls.Add(Me.ArrayAfterHeapsortListBox)
+        Me.Controls.Add(Me.ArrayAfterHeapSortLabel)
+        Me.Controls.Add(Me.ArrayAfterSelectionsortListBox)
+        Me.Controls.Add(Me.ArrayAfterSelectionSortLabel)
+        Me.Controls.Add(Me.ArrayAfterCombsortListBox)
+        Me.Controls.Add(Me.ArrayAfterCombSortLabel)
+        Me.Controls.Add(Me.ArrayAftergnomesortListBox)
+        Me.Controls.Add(Me.ArrayAftergnomeSortLabel)
         Me.Controls.Add(Me.ArrayAfterPigeonholeSortListBox)
         Me.Controls.Add(Me.ArrayAfterPigeonholeSortLabel)
         Me.Controls.Add(Me.ArrayAfterShellSortListBox)
@@ -312,4 +417,14 @@ Partial Class Form1
     Private WithEvents ArrayAfterSortLabel As Label
     Private WithEvents OriginalArrayListBox As ListBox
     Private WithEvents OriginalArrayLabel As Label
+    Private WithEvents ArrayAfterCombsortListBox As ListBox
+    Private WithEvents ArrayAfterCombSortLabel As Label
+    Private WithEvents ArrayAftergnomesortListBox As ListBox
+    Private WithEvents ArrayAftergnomeSortLabel As Label
+    Private WithEvents ArrayAfterCountingSortLabel As Label
+    Private WithEvents ArrayAfterCountingsortListBox As ListBox
+    Private WithEvents ArrayAfterHeapsortListBox As ListBox
+    Private WithEvents ArrayAfterHeapSortLabel As Label
+    Private WithEvents ArrayAfterSelectionsortListBox As ListBox
+    Private WithEvents ArrayAfterSelectionSortLabel As Label
 End Class
